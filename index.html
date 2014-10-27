@@ -1,0 +1,26 @@
+<html ng-app="app">
+<head>
+    <title>Angular.js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="WorldController">
+<h5>The planet is named {{planetName}} , you are in the Continent : {{continent}}</h5>
+<div>
+<label>Select One Continent</label>
+<select ng-model="continent">
+    <option ng-repeat="singleContinent in continents" value='{{singleContinent.name}}'>{{singleContinent.name | uppercase }}</option>
+</select>
+</div>
+
+<div>
+<b>COUNTRIES</b>
+
+<country ng-repeat="country in countries" country-name="{{country.name}}"></country>
+
+
+</div>
+
+
+</body>
+</html>
